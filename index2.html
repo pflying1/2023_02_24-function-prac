@@ -13,18 +13,29 @@
   </div>
 
   <script>
+    //변수 root 선언 하고 문서.요소아이디 root를 담음
     let root = document.getElementById("root");
+    // 함수 마이너스계산기 (첫번째 변수, 두번째 변수)
     function minusCaculator(firstValue, secondValue) {
+      // 두번째값이 크면 -가 나오기 때문에 if문을 넣어줬음
+      //조건문 첫째값이 두번째값보다 작을경우
       if(firstValue < secondValue) {
+        //참일경우
+        //변수 결과 (두번째값 - 첫째값)
       let result = (secondValue -  firstValue);
+      //결과값를 반환한다.
       return result;
       } else {
+        //거짓일 경우 (첫번째값 - 두번째값)
       let result = (firstValue - secondValue);
+      //결과값을 반환한다.
       return result;
       }
     }
+    //콘솔에 계산기 만든거 확인 
     console.log(minusCaculator(40, 29));
     console.log(minusCaculator(20, 40));
+    //html 에서 계산기 잘되는지 확인
     root.children[0].innerHTML = minusCaculator(40, 2103);
     root.children[1].innerHTML = minusCaculator(423, 871293);
 
