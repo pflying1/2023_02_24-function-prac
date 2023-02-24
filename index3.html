@@ -14,25 +14,26 @@
   <script>
     let root = document.getElementById("root");
     function BMICalculator(heightValue, weightValue) {
-      let result = weightValue / (heightValue * heightValue) * 10000 ;
-    
+      let a = weightValue / (heightValue * heightValue) * 10000;
+      let result = a.toFixed(1);
       if(result > 30) {
-        return result.toFixed(2)+"중등도비만";
-      } else if (23 < result < 25 ) {
-        return result.toFixed(2)+"경도비만";
+        return result+"중등도비만";
 
-      } else if (18.5 < result <23 ) {
-        return result.toFixed(2)+"과체중";
+      } else if (25 < result && result < 30 ) {
+        return result+"경도비만";
+
+      } else if (23 < result && result < 25 ) {
+        return result+"과체중";
       
-      } else if (0 < result < 18.5 ) {
-        return result.toFixed(2)+"정상";
+      } else if (18.5 < result && result < 23 ) {
+        return result+"정상";
 
       } else{
-        return result.toFixed(2)+"저체중";
+        return result+"저체중";
 
       }
     }
-    console.log(BMICalculator(170,70));
+    console.log(BMICalculator(174,55));
   </script>
 </body>
 </html>
