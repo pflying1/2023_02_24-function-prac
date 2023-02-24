@@ -7,6 +7,25 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <script>
+    //변수 선언 방식
+    let rubin = 1;
+    console.log(rubin);
+    rubin = "바보";
+    console.log(rubin);
+
+    //함수 선언 방식
+    //()도 변수
+    function valueChange(a, b) {
+      return a + b + "안녕하세요" ;
+    }
+    //()는 호출이다.
+    //반환이 없는 return은 거의 없다. 
+    // rubin에 valeuChange호출을 담음
+    //객체에서는 key, 함수에서는 매개변수
+    rubin = valueChange( "뚱뚱", "님");
+    console.log(rubin);
+
+  </script>
 </body>
 </html>
