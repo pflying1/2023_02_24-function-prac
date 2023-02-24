@@ -14,7 +14,7 @@
   <script>
     let root = document.getElementById("root");
     function BMICalculator(heightValue, weightValue) {
-      //비만도 측정 방법
+      //비만도 측정 방법 현재는 cm 측정이라 10000을 곱해서 m측정으로 만들어 주었다.
       let a = weightValue / (heightValue * heightValue) * 10000;
       //toFix(소숫점자리수)를 사용하여 소숫점 자리를 한자리로 만들어 주었다.
       let result = a.toFixed(1);
